@@ -8,7 +8,7 @@ var SongQueue = Songs.extend({
     
   },
   enqueue: function(song) {
-  	debugger;
+  	// debugger;
   	 if (this.length===1) {
     	this.playFirst();
   }
