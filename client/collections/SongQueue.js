@@ -5,8 +5,10 @@ var SongQueue = Songs.extend({
     // var songQueue = new SongQueue;
 
     this.on('add', this.enqueue, this);
+    this.on('ended', this.playNext, this);
     
   },
+
   enqueue: function(song) {
   	// debugger;
   	 if (this.length===1) {
