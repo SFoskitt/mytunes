@@ -16,6 +16,16 @@ var SongQueue = Songs.extend({
 
   playFirst: function() {
   	this.at(0).play();
+  },
+
+  playNext: function() {
+  	this.shift()
+  	if(this.length===0){
+  		this.trigger('stop');
+  	} else {
+  		this.playFirst();
+
+  	}
   }
 
 });
